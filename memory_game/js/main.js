@@ -42,7 +42,7 @@ function flipcard() {
 
 	cardsInPlay.push(cards[cardId].rank );
 
-	this.setAttribute(src,cards[cardId].cardImage);
+	this.setAttribute('src',cards[cardId].cardImage);
 
 	if (cardsInPlay.length === 2) {
 		checkForMatch();
@@ -56,9 +56,8 @@ function createBoard() {
      	let cardElement = document.createElement('img');
   		cardElement.setAttribute('src', 'images/back.png');
   		cardElement.setAttribute('data-id', i);
-  		
-  		document.getElementsById('game-board').appendChild(cardElement);
   		cardElement.addEventListener('click', flipcard);
+  		document.getElementById('game-board').appendChild(cardElement);
 	};
 };
 
